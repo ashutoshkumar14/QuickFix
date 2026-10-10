@@ -1,0 +1,520 @@
+/* ========================================================
+   ROYAL TECH NAVY NAVBAR (Instant Premium Look)
+======================================================== */
+.navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Rich deep navy gradient */
+  background: linear-gradient(135deg, #0b3557 0%, #164d73 100%);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 8px 24px -4px rgba(9, 30, 54, 0.25);
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0.95rem 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Brand Logo (White + Glowing Orange) */
+.brand-logo {
+  font-size: 1.7rem;
+  font-weight: 850;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  text-decoration: none;
+}
+
+.brand-accent {
+  color: #f7941d;
+  text-shadow: 0 0 15px rgba(247, 148, 29, 0.5);
+}
+
+/* Menu Layout */
+.nav-menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  /* Soft silver text */
+  padding: 0.4rem 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+/* Underline Glow Indicator */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2.5px;
+  background: linear-gradient(90deg, #38bdf8, #f7941d);
+  border-radius: 4px;
+  transition: width 0.25s ease-in-out;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.7);
+}
+
+/* Sirf hover karne par underline dikhegi */
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active link par pehle se koi underline nahi aayegi */
+.nav-link.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  width: 0%;
+}
+
+/* Jab active link par bhi hover karoge, tabhi line aayegi */
+.nav-link.active:hover::after {
+  width: 100%;
+}
+
+/* Action Buttons */
+.nav-actions {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+/* Glassmorphism Frosted Login Button */
+.btn-secondary {
+  padding: 0.55rem 1.3rem;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #38bdf8;
+  color: #38bdf8;
+  transform: translateY(-1px);
+}
+
+/* Sunset Glow Book Now Button */
+.btn-primary {
+  padding: 0.58rem 1.45rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f7941d 0%, #ea580c 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 15px rgba(247, 148, 29, 0.4);
+  transition: all 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #fb9a24 0%, #d97706 100%);
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 20px rgba(247, 148, 29, 0.6);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Hamburger Toggle */
+.mobile-menu-btn {
+  display: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 7px;
+  z-index: 1002;
+}
+
+.hamburger-bar {
+  width: 24px;
+  height: 2.5px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ========================================================
+   RESPONSIVE MOBILE VIEW
+======================================================== */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .nav-menu-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #091e36;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+    padding: 1.2rem 1.6rem 1.6rem 1.6rem;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.35s ease-in-out, opacity 0.25s ease-in-out, visibility 0.35s;
+  }
+
+  .nav-menu-wrapper.open {
+    max-height: 420px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.65rem 0;
+    font-size: 1.05rem;
+    color: #e2e8f0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    width: 100%;
+    padding-top: 0.4rem;
+  }
+
+  .nav-actions a {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .bar-top {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .bar-mid {
+    opacity: 0;
+  }
+
+  .bar-bot {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+/* ========================================================
+   ROYAL TECH NAVY NAVBAR
+======================================================== */
+.navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #0b3557 0%, #164d73 100%);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 8px 24px -4px rgba(9, 30, 54, 0.25);
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0.85rem 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.brand-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Menu Layout */
+.nav-menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  padding: 0.4rem 0;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Hover-Only Underline */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2.5px;
+  background: linear-gradient(90deg, #38bdf8, #f59e0b);
+  border-radius: 4px;
+  transition: width 0.25s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  width: 0%;
+}
+
+.nav-link.active:hover::after {
+  width: 100%;
+}
+
+/* Action Buttons */
+.nav-actions {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.btn-secondary {
+  padding: 0.55rem 1.25rem;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: #38bdf8;
+  color: #38bdf8;
+  transform: translateY(-1px);
+}
+
+/* ========================================================
+   METALLIC BRONZE / COPPER "BOOK" BUTTON (Matching Image 2)
+==============================================/* ========================================================
+   MODERN BRAND BOOK BUTTON (Matches Logo & Header Tone)
+======================================================== */
+/* ========================================================
+   MODERN BALANCED & LUXURY "BOOK" BUTTON (No Eye-Strain)
+======================================================== */
+.btn-navbar-book {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.52rem 1.25rem;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 650;
+  letter-spacing: -0.2px;
+
+  /* Soft calming text - zero glare */
+  color: #f8fafc;
+
+  /* Deep Navy-Glass with subtle warm glow */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Delicate dual border: faint cyan & gold trace */
+  border: 1px solid rgba(245, 158, 11, 0.45);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.22s ease-in-out;
+}
+
+.book-btn-icon {
+  color: #f59e0b;
+  /* Soft golden icon accent */
+  transition: transform 0.2s ease;
+}
+
+/* Hover state: smooth, gentle lift */
+.btn-navbar-book:hover {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: #f59e0b;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.25);
+}
+
+.btn-navbar-book:hover .book-btn-icon {
+  transform: scale(1.1);
+}
+
+.btn-navbar-book:active {
+  transform: translateY(0);
+  background: rgba(245, 158, 11, 0.2);
+}
+/* Mobile Toggle */
+.mobile-menu-btn {
+  display: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 7px;
+  z-index: 1002;
+}
+
+.hamburger-bar {
+  width: 24px;
+  height: 2.5px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .nav-menu-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #091e36;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+    padding: 1.2rem 1.6rem 1.6rem 1.6rem;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.25);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.35s ease-in-out, opacity 0.25s ease-in-out, visibility 0.35s;
+  }
+
+  .nav-menu-wrapper.open {
+    max-height: 420px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.65rem 0;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    width: 100%;
+    padding-top: 0.4rem;
+  }
+
+  .nav-actions a {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,514 @@
+
+/* ========================================================
+   HIGH-END DUAL-STAGE AUTH WORKSPACE
+======================================================== */
+.login-page {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(224, 242, 254, 0.55) 0%, transparent 60%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  font-family: inherit;
+}
+
+/* Brand Logo Matching Main Landing Page */
+.brand-logo-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 1.65rem;
+  font-weight: 850;
+  color: #0b3557;
+  letter-spacing: -0.6px;
+}
+
+.brand-bolt {
+  color: #0284c7;
+  font-size: 1.4rem;
+}
+
+.brand-blue {
+  color: #0284c7;
+}
+
+.brand-logo-lockup.small-logo {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+/* ========================================================
+   STEP 1: EXPANSIVE ROLE SELECTION SCREEN
+======================================================== */
+.role-selection-wrapper {
+  width: 100%;
+  max-width: 980px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brand-header-pill {
+  margin-bottom: 1.2rem;
+}
+
+.role-header-content h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0b3557;
+  letter-spacing: -0.5px;
+  margin: 0 0 0.5rem 0;
+}
+
+.role-header-content p {
+  font-size: 0.96rem;
+  color: #64748b;
+  margin: 0 0 2.4rem 0;
+}
+
+/* Big Cards 3-Column Grid */
+.big-role-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.big-role-card {
+  background: #ffffff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 2rem 1.6rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(11, 53, 87, 0.04);
+  cursor: pointer;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.22s ease;
+  position: relative;
+}
+
+.big-role-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+  box-shadow: 0 16px 36px -6px rgba(11, 53, 87, 0.12);
+}
+
+.role-top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.3rem;
+}
+
+.big-role-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f7ff;
+  border: 1px solid #bae6fd;
+  color: #0284c7;
+  transition: transform 0.2s ease;
+}
+
+.big-role-card:hover .big-role-icon {
+  transform: scale(1.06);
+  background: #0b3557;
+  color: #ffffff;
+  border-color: #0b3557;
+}
+
+.portal-tag {
+  font-size: 0.72rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  color: #0284c7;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  letter-spacing: 0.3px;
+}
+
+.big-role-card h3 {
+  font-size: 1.35rem;
+  font-weight: 750;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.3px;
+}
+
+.big-role-card p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 0 1.6rem 0;
+}
+
+.role-card-action {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 750;
+  color: #0b3557;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1rem;
+  transition: color 0.2s ease;
+}
+
+.big-role-card:hover .role-card-action {
+  color: #0284c7;
+}
+
+.role-footer-help {
+  margin-top: 2.5rem;
+  font-size: 0.82rem;
+  color: #94a3b8;
+  font-weight: 550;
+}
+
+/* ========================================================
+   STEP 2: SPLIT PANEL FORM STYLING
+======================================================== */
+.login-card-container {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 20px 45px -10px rgba(11, 53, 87, 0.08);
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  overflow: hidden;
+  animation: fadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Left Brand Panel */
+.login-brand-panel {
+  background: linear-gradient(145deg, #0b3557 0%, #082842 100%);
+  color: #ffffff;
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.btn-back-role {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  font-size: 0.78rem;
+  font-weight: 650;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-back-role:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+}
+
+.panel-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  padding: 0.25rem 0.7rem;
+  border-radius: 50px;
+  margin-bottom: 1.2rem;
+  width: fit-content;
+}
+
+.login-brand-panel h2 {
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 0.7rem 0;
+  letter-spacing: -0.4px;
+}
+
+.login-brand-panel p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #94a3b8;
+  margin: 0 0 1.8rem 0;
+}
+
+.panel-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.4rem;
+}
+
+.panel-perk-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.84rem;
+  color: #e2e8f0;
+  font-weight: 550;
+}
+
+.perk-check-icon {
+  color: #38bdf8;
+  flex-shrink: 0;
+}
+
+.demo-credentials-pill {
+  margin-top: 1.6rem;
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.76rem;
+}
+
+.demo-label {
+  display: block;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.demo-credentials-pill code {
+  color: #38bdf8;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+/* Right Form Panel */
+.login-form-panel {
+  padding: 2.8rem 2.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.form-header h3 {
+  font-size: 1.35rem;
+  font-weight: 750;
+  color: #0f172a;
+  margin: 0 0 0.35rem 0;
+  letter-spacing: -0.3px;
+}
+
+.form-header p {
+  font-size: 0.86rem;
+  color: #64748b;
+  margin: 0 0 1.6rem 0;
+  line-height: 1.45;
+}
+
+/* Form Groups & Inputs */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label-flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #475569;
+}
+
+.btn-forgot-inline {
+  background: none;
+  border: none;
+  font-size: 0.76rem;
+  color: #0284c7;
+  font-weight: 650;
+  cursor: pointer;
+  padding: 0;
+}
+
+.custom-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.custom-input-wrap:focus-within {
+  border-color: #0284c7;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.custom-input-wrap input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 0.78rem 1rem 0.78rem 2.45rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #0f172a;
+  outline: none;
+}
+
+.input-err {
+  font-size: 0.74rem;
+  color: #ef4444;
+}
+
+/* Auth Submit Button */
+.btn-auth-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #0b3557 0%, #164d73 100%);
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem 1.4rem;
+  border-radius: 10px;
+  font-size: 0.94rem;
+  font-weight: 750;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(11, 53, 87, 0.18);
+  transition: all 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-auth-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #0d426d 0%, #1a5985 100%);
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 18px rgba(11, 53, 87, 0.25);
+}
+
+.btn-auth-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Toggle Link */
+.form-footer-toggle {
+  margin-top: 1.4rem;
+  text-align: center;
+  font-size: 0.84rem;
+  color: #64748b;
+}
+
+.btn-link-action {
+  background: none;
+  border: none;
+  color: #0b3557;
+  font-weight: 750;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.btn-link-action:hover {
+  color: #0284c7;
+}
+
+.form-footer-terms {
+  margin-top: 1.6rem;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-footer-terms a {
+  color: #0b3557;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Success Banner */
+.auth-alert-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 650;
+  margin-bottom: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .big-role-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .login-card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand-panel {
+    padding: 2.2rem 1.8rem;
+  }
+
+  .login-form-panel {
+    padding: 2.2rem 1.8rem;
+  }
+}

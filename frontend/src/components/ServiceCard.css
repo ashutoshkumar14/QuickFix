@@ -1,0 +1,165 @@
+/* ========================================================
+   BALANCED & SOFT SERVICE CARD (No Eye-Strain)
+======================================================== */
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.35rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 22px -4px rgba(11, 53, 87, 0.08);
+}
+
+/* Card Header */
+.card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+/* Soft, balanced Icon Box */
+.service-icon-box {
+  width: 44px;
+  height: 44px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b3557;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover .service-icon-box {
+  background-color: #f0f7ff;
+  border-color: #bfdbfe;
+}
+
+/* Subtle, Muted Badge */
+.service-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  background-color: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+}
+
+/* Body: Balanced Typography */
+.card-body {
+  flex: 1;
+  margin-bottom: 1.1rem;
+}
+
+/* Title: Soft slate, 600 weight - Ankhon par bilkul nahi chubhega */
+.service-title {
+  font-size: 1.05rem;
+  color: #1e293b;
+  /* Gentle Charcoal Slate */
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+}
+
+/* Rating Row */
+.service-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.55rem;
+}
+
+.rating-val {
+  color: #334155;
+  font-weight: 600;
+}
+
+.rating-count {
+  color: #94a3b8;
+  font-size: 0.78rem;
+}
+
+/* Description: readable, calm */
+.service-desc {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Footer: Price & Book Button */
+.card-footer {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-tag {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 0.68rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.price-amount {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #0b3557;
+}
+
+/* Button: Clean & balanced with Navbar tone */
+.btn-book {
+  background: linear-gradient(135deg, #0b3557 0%, #164d73 100%);
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1.15rem;
+  border-radius: 7px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(11, 53, 87, 0.18);
+  transition: all 0.2s ease;
+}
+
+.btn-book:hover {
+  background: linear-gradient(135deg, #0f4570 0%, #1e5f8d 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(11, 53, 87, 0.25);
+}
+
+.btn-book:active {
+  transform: scale(0.98);
+}
+
+
+
+.custom-service-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}

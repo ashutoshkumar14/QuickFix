@@ -1,0 +1,259 @@
+/* ========================================================
+   SERVICE DETAIL MODAL
+======================================================== */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(9, 30, 54, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 680px;
+  max-height: 88vh;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(9, 30, 54, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.modal-header {
+  padding: 1.4rem 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8f0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.modal-title-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Modal Icon Box (Ab Vector Icon Saaf Dikhega) */
+.modal-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #0b3557 0%, #164d73 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(11, 53, 87, 0.25);
+  flex-shrink: 0;
+}
+
+.modal-title-area h2 {
+  font-size: 1.35rem;
+  font-weight: 850;
+  color: #0f172a;
+  margin-bottom: 0.15rem;
+  letter-spacing: -0.3px;
+}
+
+.modal-category {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.modal-close-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+  color: #ef4444;
+}
+
+.modal-body {
+  padding: 1.8rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.modal-long-desc {
+  font-size: 0.96rem;
+  color: #334155;
+  line-height: 1.65;
+}
+
+.modal-perks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.perk-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.perk-svg-icon {
+  color: #0b3557;
+}
+
+.perk-pill strong {
+  display: block;
+  font-size: 0.82rem;
+  color: #0f172a;
+}
+
+.perk-pill p {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.section-heading {
+  font-size: 1.05rem;
+  color: #0f172a;
+  margin-bottom: 0.85rem;
+  font-weight: 800;
+}
+
+.issues-list,
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.issue-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: #1e293b;
+  background-color: #fefce8;
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #fef08a;
+  line-height: 1.4;
+}
+
+.bullet-check {
+  color: #ca8a04;
+  font-weight: 850;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  color: #334155;
+  background-color: #f8fafc;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.bullet-dot {
+  color: #0b3557;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.modal-footer {
+  padding: 1.25rem 1.8rem;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.modal-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-price-label {
+  font-size: 0.72rem;
+  color: #64748b;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.modal-price-val {
+  font-size: 1.6rem;
+  font-weight: 850;
+  color: #0b3557;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.85rem;
+}
+
+.btn-cancel {
+  padding: 0.65rem 1.3rem;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #475569;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+}
+
+/* Matching Navy CTA in Modal */
+.btn-confirm-book {
+  padding: 0.65rem 1.6rem;
+  background: linear-gradient(135deg, #0b3557 0%, #164d73 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(11, 53, 87, 0.28);
+  transition: all 0.2s ease;
+}
+
+.btn-confirm-book:hover {
+  background: linear-gradient(135deg, #0f4570 0%, #1e5f8d 100%);
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 18px rgba(11, 53, 87, 0.38);
+}

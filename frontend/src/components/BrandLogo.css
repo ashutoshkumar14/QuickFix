@@ -1,0 +1,84 @@
+/* ========================================================
+   QUICKFIX BRAND LOGO (Matching Reference Image)
+======================================================== */
+.brand-logo-component {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-family: inherit;
+  user-select: none;
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* "Quick" Text */
+.logo-text-quick {
+  font-size: 1.65rem;
+  font-weight: 850;
+  color: #3e4b5b;
+  /* Slate graphite from image */
+  letter-spacing: -0.6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* "Q" with Arrow/Pointer Triangle */
+.q-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.q-pointer-triangle {
+  position: absolute;
+  bottom: 1px;
+  right: -3px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 9px solid #f59e0b;
+  /* Golden accent */
+  transform: rotate(35deg);
+}
+
+/* "Fix" Text */
+.logo-text-fix {
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: #f59e0b;
+  /* Bright golden yellow from image */
+  letter-spacing: -0.5px;
+  margin-left: 1px;
+}
+
+/* Crossed Tools Emblem */
+.logo-tool-emblem {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 3px;
+  color: #f59e0b;
+}
+
+.tool-hammer {
+  position: absolute;
+  transform: rotate(-35deg);
+}
+
+.tool-wrench {
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+/* Dark mode / Navbar adapt variant */
+.brand-logo-component.navbar .logo-text-quick {
+  color: #ffffff;
+  /* Contrast on Tech Navy Header */
+}
+
+.brand-logo-component.footer .logo-text-quick {
+  color: #ffffff;
+}
